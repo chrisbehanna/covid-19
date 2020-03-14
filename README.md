@@ -38,26 +38,34 @@ significance?  The model in the paper cited below also operates on this data, so
 it makes sense to use it.  I used the chart in this source for the baseline CFR
 for age 10-19.
 
-1. Overall CFRs by comorbidity, from table 1 in ["Estimation of risk factors for
+2. Overall CFRs by comorbidity, from table 1 in ["Estimation of risk factors for
 COVID-19 mortality - preliminary
 results"](https://www.researchgate.net/publication/339505988_Estimation_of_risk_factors_for_COVID-19_mortality_-_preliminary_results),
 February 2020, by Caramelo, Ferreira, and Oliveiros.
 
-1. Odds ratios by age group, from table 2, Caramelo, Ferreira, Oliveiros, _op.
+3. Odds ratios by age group, from table 2, Caramelo, Ferreira, Oliveiros, _op.
 cite_.
 
-1. A remark from Michael Olsterholm during his appearance on [episode 1439 of
-the Joe Rogan Experience](https://www.youtube.com/watch?v=E3URhJx0NSw), in which
-he states that the deaths in Hebei Province in China are dominated by men over
-age 65 who smoke.  He goes on to state that most men in that age group smoke,
-whereas most women in that age group do not, and the men are dying at five times
-the rate of the women.  Olsterholm is an expert in infectious disease and
-epidemiology, and is Regents Professor, McKnight Presidential Endowed Chair in
-Public Health, the director of the Center for Infectious Disease Research and
+4. <strike>A remark from Michael Olsterholm during his appearance on [episode
+1439 of the Joe Rogan Experience](https://www.youtube.com/watch?v=E3URhJx0NSw),
+in which he states that the deaths in Hebei Province in China are dominated by
+men over age 65 who smoke.  He goes on to state that most men in that age group
+smoke, whereas most women in that age group do not, and the men are dying at
+five times the rate of the women.  Olsterholm is an expert in infectious disease
+and epidemiology, and is Regents Professor, McKnight Presidential Endowed Chair
+in Public Health, the director of the Center for Infectious Disease Research and
 Policy (CIDRAP), Distinguished Teaching Professor in the Division of
 Environmental Health Sciences, School of Public Health, a professor in the
 Technological Leadership Institute, College of Science and Engineering, and an
 adjunct professor in the Medical School, all at the University of Minnesota.
+</strike>
+
+5. Update to risk factor from being a current smoker:  "Clinical course and risk
+factors for mortality of adult inpatients with COVID-19 in Wuhan, China: a
+retrospective cohort study", Zhou, Yu, Dou, Fan, Liu _et al_, published in [The
+Lancet](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30566-3/fulltext),
+2020 March 11.  They show an odds ratio of death for being a current smoker vs.
+being a non-smoker of 2.23 in Table 3.
 
 ## Examples
 
@@ -107,13 +115,8 @@ is more than one way to compute CFR, and the authors assumed homogeneous
 distribution of gender and comorbidity by age.  If that assumption is wrong,
 then this tool will also be wrong, although I hope by only a small amount.
 
-* Caramelo _et al_ do not discuss smoking as a risk factor.  In an attempt to
-tease it out independently to match Osterholm's remark about male smokers over
-age 65 dying at five times the rate of female nonsmokers of the same age, given
-Caramelo's discovered odds ratio of 1.85 for simply being male, I fudged around
-a little bit to try to make `risk.py -s -m 65` come out to about 5x `risk.py
-65`.  I didn't _completely_ do this _ex recto_:  I took the factor of five,
-multiplied it by the overall CFR divided by the CFR for males, and then
-multiplied it by the ratio of males to females.  The resultant figure gets
-multiplied by the computed risk for females of a given age and is then fed to
-the product of probabilities of survival for the given risk factors.
+* Caramelo _et al_ do not discuss smoking as a risk factor.  What I've done is
+to take the odds ratio from Zhou _et al_ in _The Lancet_ (cited _supra_ under
+sources) and multiply it by the computed baseline risk for the specified age
+group, and then combine probabilities as described in the second bullet,
+_supra_.

@@ -107,7 +107,16 @@ def compute_risk():
     # divided by the CFR for males, and then multiply it by the ratio of males
     # to females.
     #
-    smoker = 5.00 * 0.022 / 0.0275 * 0.5143 / (1-0.5143)
+    #smoker = 5.00 * 0.022 / 0.0275 * 0.5143 / (1-0.5143)
+
+    #
+    # Update from The Lancet, "Clinical course and risk factors for mortality of
+    # adult inpatients with COVID-19 in Wuhan, China: a retrospective cohort
+    # study", Zhou et al, 2020 March 11, https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30566-3/fulltext
+    #
+    # Odds Ratio for current smoker vs. non-smoker is 2.23, from Table 3
+    #
+    smoker = 2.23
 
     #
     # Compute the risk.  We multiply the probabilities of survival for each
