@@ -59,6 +59,32 @@ Environmental Health Sciences, School of Public Health, a professor in the
 Technological Leadership Institute, College of Science and Engineering, and an
 adjunct professor in the Medical School, all at the University of Minnesota.
 
+## Examples
+
+What is the risk of dying for a 44-year-old woman?
+
+```
+./risk.py 44
+You have a 1.12% risk of dying if you contract COVID-19.
+```
+
+What is the risk of dying for a 74-year-old man who smokes?
+
+```
+./risk.py --smoker --male 74
+You have a 38.77% risk of dying if you contract COVID-19.
+```
+
+What if he also has high blood pressure?
+
+```
+./risk.py --hypertensive --smoker --male 74
+You have a 42.29% risk of dying if you contract COVID-19.
+```
+
+The risks appear to pile up rather alarmingly, especially with age, which is the
+greatest single morbidity factor.
+
 ## Caveats
 
 * This is a work in progress.  I am not a statistician by trade, nor am I a
