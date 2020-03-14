@@ -94,6 +94,11 @@ have worked as a computer programmer since then.  That is to say, my math is
 _rusty_ and, not having ventured deeply into statistics, teasing apart a
 multivariate dataset like this is a stretch.  I welcome (gentle) correction.
 
+* Per the above, I have assumed that all of the comorbidities listed in Caramelo
+ _et al_ are independent; thus, I can simply take the product of the individual
+ chance of survival for each risk factor in order to deduce the overall risk of
+ death when more than one risk factor is present.
+
 * Caramelo _et al_ state a number of limitations of their work, as described in
 the section "Discussion and conclusion," beginning in the third paragraph.
 Users of this tool would do well to read and understand those limitations.  To
