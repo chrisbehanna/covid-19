@@ -220,5 +220,5 @@ if __name__ == '__main__':
     risk = compute_risk()
 
     print(
-        "You have a {:.4%} risk of dying if you contract COVID-19.".format(risk)
+        "You have a {:.2%} risk of dying if you contract COVID-19.".format(risk)
     )
