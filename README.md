@@ -97,10 +97,10 @@ greatest single morbidity factor.
 
 * This is a work in progress.  I am not a statistician by trade, nor am I a
 medical professional or researcher.  I have a Bachelor's degree in physics from
-Carnegie Mellon, I completed my education nearly thirty years ago, and I
-have worked as a computer programmer since then.  That is to say, my math is
-_rusty_ and, not having ventured deeply into statistics, teasing apart a
-multivariate dataset like this is a stretch.  I welcome (gentle) correction.
+Carnegie Mellon, I completed my education awhile ago, and I have worked as a
+computer programmer since then.  That is to say, my math is _rusty_ and, not
+having ventured deeply into statistics, teasing apart a multivariate dataset
+like this is a stretch.  I welcome (gentle) correction.
 
 * Per the above, I have assumed that all of the comorbidities listed in Caramelo
  _et al_ are independent; thus, I can simply take the product of the individual
