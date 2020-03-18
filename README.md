@@ -4,6 +4,15 @@ This is a naïve attempt to piece together various risk factors and compute the
 risk of death for a given individual from COVID-19 given what is known at the
 time of this writing.
 
+*NOTE*:  The numbers here are computed on the basis of outcomes for people who
+got sick enough to require hospitalization.  Estimates for that fraction vary
+anywhere from 7% on the low end to 20% on the high end; thus, the risks for the
+populatioon as a whole are likely much lower.  I'm not sure quite how to
+quantify that as yet.  For the U.S. in particular, there simply hasn't been
+enough testing to have good data about that, and I've not seen a dataset from
+Hebei/Wuhan regarding it, either.  South Korea may be illuminating, given that
+they've tested well in excess of 100,000 people.
+
 ## Usage
 
 ```
